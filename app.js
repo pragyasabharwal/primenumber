@@ -7,10 +7,11 @@ function takeInput(){
 var DOB = input.value 
 var arr = (DOB.split("/"))
 
-if (arr[0]=="01"){
+if (arr[0]=="01"&& parseInt(arr[1])<13)
+{
     output.innerText="Neither prime nor composite"
   }
-  if (arr[0]=="02"  && parseInt(arr[1])<32){
+else if (arr[0]=="02"  && parseInt(arr[1])<13){
     output.innerText="\nYour birthdate is prime!"}
     else
     output.innerText="\nPlease enter a valid date!"
